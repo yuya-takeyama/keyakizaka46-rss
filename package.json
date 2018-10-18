@@ -1,8 +1,7 @@
 {
   "scripts": {
-    "build": "tsc",
     "pretty": "prettier --write 'src/**/*.ts'",
-    "start": "node build/index.js"
+    "start": "tsc && node build/index.js"
   },
   "dependencies": {
     "express": "^4.16.4",
