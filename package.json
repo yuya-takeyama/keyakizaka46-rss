@@ -1,7 +1,9 @@
 {
+  "license": "MIT",
   "scripts": {
-    "pretty": "prettier --write 'src/**/*.ts'",
-    "start": "tsc && node build/index.js"
+    "deploy": "serverless deploy -v",
+    "logs": "SLACK_TOKEN=\"\" AWS_LAMBDA_IAM_ROLE=\"\" serverless logs -f webhook",
+    "pretty": "prettier --write '*.ts'"
   },
   "dependencies": {
     "feed": "^2.0.1",
