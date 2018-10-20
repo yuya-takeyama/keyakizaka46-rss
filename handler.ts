@@ -1,9 +1,8 @@
-import express, { Request, Response } from 'express';
 import { Feed } from 'feed';
 import { JSDOM } from 'jsdom';
 import fetch from 'node-fetch';
+import { APIGatewayProxyHandler } from 'aws-lambda';
 
-const app = express();
 const baseUrl = 'http://www.keyakizaka46.com';
 const path = (path: string) => baseUrl + path;
 
@@ -13,9 +12,7 @@ const feed = new Feed({
   feed: path('/'),
   id: path('/'),
   link: path('/'),
-  feedLinks: {
-    atom: 'https://keyakizaka46-rss.herokuapp.com/atom',
-  },
+  feedLinks: {},
   copyright: 'Seed & Flower LLC',
 });
 
@@ -29,10 +26,8 @@ const ensureError = (err: any): Error => {
   }
 };
 
-app.get('/atom', async (_: Request, res: Response) => {
+export const atom: APIGatewayProxyHandler = async (event, context) => {
   try {
-    res.type('atom');
-
     const page = await fetch(path('/s/k46o/news/list?ima=0000'));
     const html = await page.text();
     const dom = new JSDOM(html);
@@ -58,15 +53,25 @@ app.get('/atom', async (_: Request, res: Response) => {
       }
     }
 
-    res.status(200);
-    res.send(feed.atom1());
+    return {
+      statusCode: 200,
+      headers: {
+        'Content-Type': 'application/atom+xml',
+      },
+      body: feed.atom1(),
+    };
   } catch (err) {
-    res.type('txt');
-
     const error = ensureError(err);
-    res.status(500);
-    res.send(error.message);
-  }
-});
+    console.error(error);
 
-export default app;
+    return {
+      statusCode: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message: error.message,
+      }),
+    };
+  }
+};
