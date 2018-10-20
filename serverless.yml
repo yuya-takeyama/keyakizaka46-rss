@@ -12,8 +12,7 @@ plugins:
   - serverless-webpack
 
 functions:
-  webhook:
-    name: atom
+  atom:
     handler: handler.atom
     role: ${env:AWS_LAMBDA_IAM_ROLE}
     events:
