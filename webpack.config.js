@@ -7,9 +7,15 @@ module.exports = {
 
   module: {
     rules: [{
-      test: /\.ts(x?)$/,
-      use: 'ts-loader',
-    }, ],
+        test: /\.ts(x?)$/,
+        use: 'ts-loader',
+      },
+      {
+        type: 'javascript/auto',
+        test: /\.mjs$/,
+        use: []
+      }
+    ],
   },
 
   resolve: {
