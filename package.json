@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "deploy": "serverless deploy -v",
-    "logs": "SLACK_TOKEN=\"\" AWS_LAMBDA_IAM_ROLE=\"\" serverless logs -f webhook",
+    "logs": "SLACK_TOKEN=\"\" AWS_LAMBDA_IAM_ROLE=\"\" serverless logs -f atom",
     "package": "serverless package -v",
     "pretty": "prettier --write '*.ts'"
   },

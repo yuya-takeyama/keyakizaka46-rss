@@ -5,7 +5,7 @@ provider:
   runtime: nodejs8.10
   stage: production
   region: ap-northeast-1
-  memorySize: 1024
+  memorySize: 300
   timeout: 10
 
 plugins:
