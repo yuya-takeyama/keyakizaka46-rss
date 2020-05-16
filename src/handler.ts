@@ -1,4 +1,3 @@
-import { Feed } from 'feed';
 import fetch from 'node-fetch';
 import { APIGatewayProxyHandler } from 'aws-lambda';
 import { html2atom } from './html2atom';
@@ -14,7 +13,7 @@ const ensureError = (err: any): Error => {
   }
 };
 
-export const atom: APIGatewayProxyHandler = async (event, context) => {
+export const atom: APIGatewayProxyHandler = async () => {
   try {
     const page = await fetch(path('/s/k46o/news/list?ima=0000'));
     const html = await page.text();
