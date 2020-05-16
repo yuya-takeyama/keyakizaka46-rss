@@ -4,7 +4,8 @@
     "deploy": "serverless deploy -v",
     "logs": "SLACK_TOKEN=\"\" AWS_LAMBDA_IAM_ROLE=\"\" serverless logs -f atom",
     "package": "serverless package -v",
-    "pretty": "prettier --write '*.ts'"
+    "pretty": "prettier --write '*.ts'",
+    "test": "jest"
   },
   "dependencies": {
     "feed": "^2.0.1",
