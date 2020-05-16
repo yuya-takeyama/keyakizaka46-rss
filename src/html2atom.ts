@@ -2,17 +2,23 @@ import { Feed } from 'feed';
 import { JSDOM } from 'jsdom';
 import { path } from './util';
 
-const feed = new Feed({
-  title: '欅坂46公式サイト',
-  description: '「坂道シリーズ」第2弾　欅坂46',
-  feed: path('/'),
-  id: path('/'),
-  link: path('/'),
-  feedLinks: {},
-  copyright: 'Seed & Flower LLC',
-});
+interface options {
+  updated: Date;
+}
 
-export const html2atom = (html: string): string => {
+export const html2atom = (html: string, options?: options): string => {
+  const updated = options && options.updated;
+  const feed = new Feed({
+    title: '欅坂46公式サイト',
+    description: '「坂道シリーズ」第2弾　欅坂46',
+    feed: path('/'),
+    id: path('/'),
+    link: path('/'),
+    feedLinks: {},
+    copyright: 'Seed & Flower LLC',
+    updated,
+  });
+
   const dom = new JSDOM(html);
   const elems = dom.window.document.querySelectorAll('.box-news ul li');
 

@@ -12,6 +12,9 @@ describe('#html2atom', () => {
     const html = (
       await readFile(join(newsFixturesDir, 'news.html'))
     ).toString();
-    expect(html2atom(html)).toMatchSnapshot();
+    const options = {
+      updated: new Date(2020, 1, 1, 9, 0, 0),
+    };
+    expect(html2atom(html, options)).toMatchSnapshot();
   });
 });

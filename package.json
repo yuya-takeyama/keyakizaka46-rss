@@ -5,7 +5,7 @@
     "logs": "SLACK_TOKEN=\"\" AWS_LAMBDA_IAM_ROLE=\"\" serverless logs -f atom",
     "package": "serverless package -v",
     "pretty": "prettier --write '*.ts'",
-    "test": "jest"
+    "test": "TZ=Asia/Tokyo jest"
   },
   "dependencies": {
     "feed": "^2.0.1",
