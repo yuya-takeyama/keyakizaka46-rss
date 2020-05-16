@@ -9,7 +9,7 @@
   "dependencies": {
     "feed": "^2.0.1",
     "jsdom": "^12.2.0",
-    "node-fetch": "^2.2.0",
+    "node-fetch": "^2.6.0",
     "source-map-support": "^0.5.9"
   },
   "devDependencies": {
