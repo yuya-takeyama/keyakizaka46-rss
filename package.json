@@ -10,7 +10,7 @@
     "feed": "^2.0.1",
     "jsdom": "^12.2.0",
     "node-fetch": "^2.6.0",
-    "source-map-support": "^0.5.9"
+    "source-map-support": "^0.5.19"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.13",
