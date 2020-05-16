@@ -11,9 +11,13 @@ provider:
 plugins:
   - serverless-webpack
 
+custom:
+  webpack:
+    excludeFiles: src/**/*.test.ts
+
 functions:
   atom:
-    handler: handler.atom
+    handler: src/handler.atom
     role: ${env:AWS_LAMBDA_IAM_ROLE}
     events:
       - http: GET atom
