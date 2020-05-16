@@ -26,7 +26,7 @@ export const html2atom = (html: string): string => {
       link = linkElem.attributes && linkElem.getAttribute('href');
       title = linkElem.innerHTML;
 
-      if (link && date) {
+      if (title && link && date) {
         feed.addItem({
           title,
           link,

@@ -9,14 +9,14 @@
   },
   "dependencies": {
     "feed": "^2.0.1",
-    "jsdom": "^12.2.0",
+    "jsdom": "^16.2.2",
     "node-fetch": "^2.6.0",
     "source-map-support": "^0.5.19"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.13",
     "@types/jest": "^25.2.2",
-    "@types/jsdom": "^12.2.0",
+    "@types/jsdom": "^16.2.3",
     "@types/node": "^10.12.0",
     "@types/node-fetch": "^2.1.2",
     "@types/source-map-support": "^0.4.1",
