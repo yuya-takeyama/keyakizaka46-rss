@@ -863,10 +863,10 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.0.0.tgz#dc85454b953178cc6043df5208b9e949b54a3bc4"
   integrity sha512-/rM+sWiuOZ5dvuVzV37sUuklsbg+JPOP8d+nNFlo2ZtfpzPiPvh1/gc8liWOLBqe+sR+ZM7guPaIcTt6UZTo7Q==
 
-"@types/source-map-support@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@types/source-map-support/-/source-map-support-0.4.1.tgz#ad77158e8c6695a16629ef82b9fb9dfe7c610ac0"
-  integrity sha512-eoyZxYGwaeHq5zCVeoNgY1dQy6dVdm1b7K9k1FRnWkf997Tji3NLBoLAjK5WCobeh1Qs6Q5KUV1rZCmHvzaDBw==
+"@types/source-map-support@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@types/source-map-support/-/source-map-support-0.5.1.tgz#b13e4de5bf2e5858e0dfe33fac90556b0f652dc3"
+  integrity sha512-VDqnZe9D2zR19qbeRvwYyHSp7AtUtCkTaRVFQ8wzwH9TXw9kKKq/vBhfEnFEXVupO2M0lBMA9mr/XyQ6gEkUOA==
   dependencies:
     "@types/node" "*"
 
