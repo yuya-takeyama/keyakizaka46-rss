@@ -8,7 +8,7 @@
     "test": "TZ=Asia/Tokyo jest"
   },
   "dependencies": {
-    "feed": "^2.0.1",
+    "feed": "^4.1.0",
     "jsdom": "^16.2.2",
     "node-fetch": "^2.6.0",
     "source-map-support": "^0.5.19"
