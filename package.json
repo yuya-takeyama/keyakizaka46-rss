@@ -8,10 +8,13 @@
     "test": "TZ=Asia/Tokyo jest"
   },
   "dependencies": {
+    "bufferutil": "^4.0.1",
+    "canvas": "file:./src/functions/canvas",
     "feed": "^2.0.1",
     "jsdom": "^16.4.0",
     "node-fetch": "= 2.6.1",
-    "source-map-support": "^0.5.19"
+    "source-map-support": "^0.5.19",
+    "utf-8-validate": "^5.0.2"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.62",
@@ -20,7 +23,6 @@
     "@types/node": "^14.11.2",
     "@types/node-fetch": "^2.5.7",
     "@types/source-map-support": "^0.5.3",
-    "canvas": "^2.6.1",
     "jest": "^26.4.2",
     "prettier": "^2.1.2",
     "serverless": "^2.3.0",
