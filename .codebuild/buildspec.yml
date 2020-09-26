@@ -6,4 +6,4 @@ phases:
       - yarn --pure-lockfile
   build:
     commands:
-      - yarn deploy
+      - ./scripts/deploy.sh
