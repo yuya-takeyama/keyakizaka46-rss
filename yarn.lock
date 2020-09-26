@@ -3370,13 +3370,12 @@ fecha@^2.3.3:
   resolved "https://registry.yarnpkg.com/fecha/-/fecha-2.3.3.tgz#948e74157df1a32fd1b12c3a3c3cdcb6ec9d96cd"
   integrity sha512-lUGBnIamTAwk4znq5BcqsDaxSmZ9nDVJaij6NvRt/Tg4R69gERA+otPKbS86ROw9nxVMw2/mp1fnaiWqbs6Sdg==
 
-feed@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/feed/-/feed-2.0.1.tgz#9d34a92b524d4bb541b4de247d6c1132cd3d7568"
-  integrity sha512-jS2hXUdEqxHCsH2++xOx8EHG9OsdJHwUDyi/OBr8B+hRwsfd1MlIi38GB/fx/1Hns8hEB5QCH/MYx1VR3YX/GA==
+feed@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/feed/-/feed-4.2.1.tgz#b246ef891051c7dbf088ca203341d9fb0444baee"
+  integrity sha512-l28KKcK1J/u3iq5dRDmmoB2p7dtBfACC2NqJh4dI2kFptxH0asfjmOfcxqh5Sv8suAlVa73gZJ4REY5RrafVvg==
   dependencies:
-    luxon "^1.3.3"
-    xml "^1.0.1"
+    xml-js "^1.6.11"
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
@@ -5234,11 +5233,6 @@ lru-queue@0.1:
   dependencies:
     es5-ext "~0.10.2"
 
-luxon@^1.3.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.4.3.tgz#84614abdeae688af115f2188504f0d890ebb3d7e"
-  integrity sha512-hujVJ+Q2RnaIiHKAupwusgpHXYICxzXJNoPkqkGIfmP+lLZWFTD6gEP+URRs/vh5gI1KwfMimVrzM9309RE0tA==
-
 make-dir@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -6666,7 +6660,7 @@ sax@1.2.1:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
   integrity sha1-e45lYZCyKOgaZq6nSEgNgozS03o=
 
-sax@>=0.6.0:
+sax@>=0.6.0, sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
@@ -8077,6 +8071,13 @@ ws@~6.1.0:
   dependencies:
     async-limiter "~1.0.0"
 
+xml-js@^1.6.11:
+  version "1.6.11"
+  resolved "https://registry.yarnpkg.com/xml-js/-/xml-js-1.6.11.tgz#927d2f6947f7f1c19a316dd8eea3614e8b18f8e9"
+  integrity sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==
+  dependencies:
+    sax "^1.2.4"
+
 xml-name-validator@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
@@ -8089,11 +8090,6 @@ xml2js@0.4.19:
   dependencies:
     sax ">=0.6.0"
     xmlbuilder "~9.0.1"
-
-xml@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
-  integrity sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=
 
 xmlbuilder@~9.0.1:
   version "9.0.7"
